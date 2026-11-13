@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopEasy - My Cart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <h2>ShopEasy</h2>
+
+        <button onclick="location.href='index.html'">
+            Continue Shopping
+        </button>
+    </header>
+
+    <!-- CART -->
+    <main class="cart-page">
+
+        <h1>My Shopping Cart</h1>
+
+        <div id="cart-items"></div>
+
+        <div class="cart-total">
+            Total: ₹<span id="total">0.00</span>
+        </div>
+
+        <div class="cart-buttons">
+
+            <button onclick="location.href='index.html'">
+                Continue Shopping
+            </button>
+
+            <button class="checkout-button" onclick="checkout()">
+                Place Order
+            </button>
+
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
