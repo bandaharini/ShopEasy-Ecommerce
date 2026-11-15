@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Checkout - ShopEasy</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <h2>ShopEasy</h2>
+
+        <div>
+            <a href="index.html">Home</a>
+            <a href="cart.html">Cart</a>
+        </div>
+    </nav>
+
+    <main class="container">
+
+        <h1>Checkout Details</h1>
+
+        <div class="checkout-layout">
+
+            <form id="checkout-form" class="checkout-form">
+
+                <h2>Delivery Information</h2>
+
+                <!-- CUSTOMER NAME -->
+
+                <label for="customer-name">Full Name</label>
+
+                <input
+                    type="text"
+                    id="customer-name"
+                    placeholder="Enter your full name"
+                    pattern="[A-Za-z][A-Za-z '-]*"
+                    title="Enter letters only. Numbers are not allowed."
+                    maxlength="60"
+                    autocomplete="name"
+                    required
+                >
+
+                <small id="name-error" class="error-message"></small>
+
+
+                <!-- MOBILE NUMBER -->
+
+                <label for="customer-phone">Mobile Number</label>
+
+                <input
+                    type="tel"
+                    id="customer-phone"
+                    placeholder="Enter 10-digit mobile number"
+                    maxlength="10"
+                    inputmode="numeric"
+                    autocomplete="tel"
+                    required
+                >
+
+                <small id="phone-error" class="error-message"></small>
+
+
+                <!-- ADDRESS -->
+
+                <label for="customer-address">Delivery Address</label>
+
+                <textarea
+                    id="customer-address"
+                    rows="4"
+                    placeholder="Enter your complete delivery address"
+                    required
+                ></textarea>
+
+
+                <!-- PAYMENT METHOD -->
+
+                <label for="payment-method">Payment Method</label>
+
+                <select id="payment-method" required>
+
+                    <option value="">Select Payment Method</option>
+
+                    <option value="Cash on Delivery">
+                        Cash on Delivery
+                    </option>
+
+                    <option value="UPI (Demo)">
+                        UPI (Demo)
+                    </option>
+
+                </select>
+
+
+                <!-- CONFIRM ORDER -->
+
+                <button type="submit" class="checkout-button">
+                    Confirm Order
+                </button>
+
+            </form>
+
+
+            <!-- ORDER SUMMARY -->
+
+            <div class="order-summary">
+
+                <h2>Order Summary</h2>
+
+                <div id="checkout-items"></div>
+
+                <hr>
+
+                <h3>
+                    Total: ₹<span id="checkout-total">0</span>
+                </h3>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <footer>
+        <p>© 2026 ShopEasy. All rights reserved.</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
